@@ -123,9 +123,42 @@ login success
 5) ------ Script to perform basic mathematic operations------
 
 
+gedit math.sh
+
+
+#!/usr/bin/bash
+read -p "enter 1st number : " m
+read -p "enter operation (+,-,*,/) : " op
+read -p "enter 2nd number : " n
+
+if [[ "$op" == "+" ]];
+then
+result=$(($m + $n))
+
+elif [[ "$op" == "-" ]];
+then
+result=$(($m - $n))
+
+elif [[ "$op" == "*" ]];
+then
+result=$(($m * $n))
+
+elif [[ "$op" == "/" ]];
+then
+result=$(($m / $n))
+
+else
+echo "invalid operation"
+fi
+echo "result= $result"
 
 
 
+OUTPUT ------> :  bash math.sh
 
+enter 1st number : 3
+enter operation (+,-,*,/) : +
+enter 2nd number : 6
+result= 9
 
-
+-------------------------------------------------------------------------------------------------
