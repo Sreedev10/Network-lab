@@ -1,0 +1,131 @@
+1) ------Script to show current date and current diroctory.------
+
+
+gedit date.sh
+
+
+#!/usr/bin/bash
+echo "current date is '$(date)'"
+echo "current diroctory ' $(pwd) '"
+
+
+OUTPUT ------> :  bash date.sh
+
+current date is 'Tuesday 01 April 2025 01:29:07 PM IST'
+current diroctory ' /home/s2mcab2/Desktop/SK53-NSA '
+
+-------------------------------------------------------------------------------------------------
+
+
+2) ------Script to find largest among 3 numbers.------
+ 
+ 
+ gedit num.sh
+ 
+ 
+ #!/usr/bin/bash
+echo "enter first number"
+read m
+read -p "enter 2nd number" n
+read -p "enter 3rd number" u
+if [ $m -gt $n ] && [ $m -gt $u ];
+then echo "largest number is $m"
+elif [ $n -gt $m ] && [ $n -gt $u ];
+then echo "largest number is $n"
+else
+echo "largest number is $u"
+fi
+
+
+OUTPUT ------> :  bash num.sh
+
+enter first number
+4
+enter 2nd number5
+enter 3rd number6
+largest number is 6
+
+-------------------------------------------------------------------------------------------------
+
+
+3) ------ Script to check whether a number is amstrong or not?------
+
+
+
+gedit amstrong.sh
+
+
+#!/usr/bin/bash
+echo "enter a number"
+read m
+temp=$m
+sum=0
+n=${#m} 
+while [ $temp -gt 0 ]
+do
+digit=$((temp % 10))
+sum=$((sum + digit ** n))
+temp=$((temp/10))
+done
+if [ $sum -eq $m ]
+then
+echo "amstrong number"
+else
+echo " not amstrong number"
+fi
+
+
+
+OUTPUT ------> :  bash amstrong.sh
+
+enter a number
+1634
+amstrong number
+
+-------------------------------------------------------------------------------------------------
+
+
+
+4) ------ Script to check password and login------
+
+
+gedit login.sh
+
+
+#!/usr/bin/bash
+uname="admin"
+pword="admin123"
+read -p "enter username:" user
+read -p "enter password:" pass
+
+echo
+
+if [[ " $user " == " $uname " && " $pass " == " $pword " ]];
+then
+echo "login success"
+else
+echo "invalid"
+fi
+
+
+
+OUTPUT ------> :  bash login.sh
+
+enter username:admin
+enter password:admin123
+
+login success
+
+
+-------------------------------------------------------------------------------------------------
+
+
+5) ------ Script to perform basic mathematic operations------
+
+
+
+
+
+
+
+
